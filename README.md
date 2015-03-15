@@ -1,2 +1,2 @@
 # pool_boy
-Named pools for reds
+Named pools for redis

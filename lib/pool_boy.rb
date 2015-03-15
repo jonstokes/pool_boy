@@ -3,6 +3,7 @@ require 'connection_pool'
 require 'active_support/all'
 require 'redis'
 require 'yaml'
+require 'retryable'
 require 'pool_boy/settings'
 require 'pool_boy/initialize'
 
@@ -21,7 +22,7 @@ module PoolBoy
       end
 
       def with_connection
-        retryable(sleep: 0.5) do
+        Retryable.retryable(sleep: 0.5) do
           model_pool.with do |conn|
             yield conn
           end
