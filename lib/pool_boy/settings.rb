@@ -7,7 +7,7 @@ module PoolBoy
     end
 
     def self.configuration
-      @configuration ||= Bellbro::Settings::SettingsData.new
+      @configuration ||= PoolBoy::Settings::SettingsData.new
     end
 
     def self.configure
