@@ -1,3 +1,11 @@
+require 'pool_boy/version'
+require 'connection_pool'
+require 'active_support/all'
+require 'redis'
+require 'yaml'
+require 'pool_boy/settings'
+require 'pool_boy/initialize'
+
 module PoolBoy
   def with_connection
     self.class.with_connection do |c|

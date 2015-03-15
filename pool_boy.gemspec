@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "connection_pool"
   spec.add_dependency "thread_safe"
   spec.add_dependency "figaro"
-
+  spec.add_dependency "yaml"
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
